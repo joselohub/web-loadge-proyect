@@ -1,65 +1,63 @@
 .body_container {
   display: grid;
-  border-radius: 5px;
+  font-family: sans-serif;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 5fr 0.5fr 3fr 3fr;
-  grid-template-areas: "header header header header " "nav nav nav nav " "primer_articulo primer_articulo primer_articulo primer_articulo " "tourist_programs tourist_programs tourist_programs tourist_programs " "program1 program2 program3 program4 " "footer footer footer footer ";
-  grid-gap: 10px;
+  grid-template-rows: 1fr 5fr 0.5fr 3fr 3fr;
+  grid-template-areas: "header nav nav nav" "primer_articulo primer_articulo primer_articulo primer_articulo " "tourist_programs tourist_programs tourist_programs tourist_programs " "program1 program2 program3 program4 " "footer footer footer footer ";
 }
 .body_container header {
-  background-color: orange;
+  background-color: rgb(53, 121, 53);
   grid-area: header;
-  border-radius: 10px;
 }
 .body_container nav {
-  background-color: #5d8465;
+  background-color: rgb(53, 121, 53);
   grid-area: nav;
-  border-radius: 10px;
 }
 .body_container main {
-  background-color: rgb(208, 97, 97);
   grid-area: main;
-  border-radius: 10px;
 }
 .body_container .primer_articulo {
-  background-color: rgb(241, 191, 191);
   grid-area: primer_articulo;
-  border-radius: 10px;
 }
 .body_container .primer_articulo img {
   width: 100%;
 }
 .body_container .tourist_programs {
-  background-color: rgb(123, 123, 211);
   grid-area: tourist_programs;
-  border-radius: 10px;
 }
 .body_container .program1 {
   grid-area: program1;
-  background-color: rgb(184, 128, 237);
-  border-radius: 10px;
+  background-color: rgb(244, 223, 209);
+  margin: 5px;
 }
 .body_container .program2 {
   grid-area: program2;
-  background-color: rgb(184, 128, 237);
-  border-radius: 10px;
+  background-color: rgb(244, 223, 209);
+  margin: 5px;
 }
 .body_container .program3 {
   grid-area: program3;
-  background-color: rgb(184, 128, 237);
-  border-radius: 10px;
+  background-color: rgb(244, 223, 209);
+  margin: 5px;
 }
 .body_container .program4 {
   grid-area: program4;
-  background-color: rgb(184, 128, 237);
-  border-radius: 10px;
+  background-color: rgb(244, 223, 209);
+  margin: 5px;
 }
 .body_container footer {
   grid-area: footer;
-  background-color: rgb(46, 45, 45);
+  background-color: rgb(53, 121, 53);
   color: white;
 }
 
+@media only screen and (max-width: 700px) {
+  .body_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 2fr;
+    grid-template-areas: "header header" "nav nav" "primer_articulo primer_articulo" "tourist_programs tourist_programs" "program1 program2" "program3 program4" "footer footer";
+  }
+}
 @media only screen and (max-width: 550px) {
   .body_container {
     grid-template-columns: 1fr;
