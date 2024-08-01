@@ -1,0 +1,101 @@
+//global adjust
+$gap_global:10px;
+$radio:10px;
+
+.body_container{
+  display: grid;
+  border-radius: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 5fr 0.5fr 3fr 3fr;
+  grid-template-areas: 
+  "header header header header "
+  "nav nav nav nav "
+  "primer_articulo primer_articulo primer_articulo primer_articulo "
+  "tourist_programs tourist_programs tourist_programs tourist_programs "
+  "program1 program2 program3 program4 "
+  "footer footer footer footer ";
+  grid-gap: $gap_global;
+  
+
+
+//header
+header{
+  
+  background-color: orange;
+  grid-area: header;
+  border-radius: $radio;
+  
+}
+
+//nav
+nav{
+  
+  background-color: #5d8465;
+  grid-area:nav ;
+  border-radius: $radio;
+}
+
+//main
+main{
+  background-color: rgb(208, 97, 97);
+  grid-area:main;
+  border-radius: $radio;
+
+}
+.primer_articulo{
+  background-color: rgb(241, 191, 191);
+  grid-area: primer_articulo;
+  border-radius: $radio;
+  img{
+    width:100%;
+  }
+  
+}
+.tourist_programs{
+  background-color: rgb(123, 123, 211);
+  grid-area: tourist_programs;
+  border-radius: $radio;
+}
+.program1{
+  grid-area: program1;
+  background-color: rgb(184, 128, 237);
+  border-radius: $radio;
+}
+.program2{
+  grid-area:  program2 ;
+  background-color: rgb(184, 128, 237);
+  border-radius: $radio;
+}
+.program3{
+  grid-area:  program3 ;
+  background-color: rgb(184, 128, 237);
+  border-radius: $radio;
+}
+.program4{
+  grid-area: program4;
+  background-color: rgb(184, 128, 237);
+  border-radius: $radio;
+}
+
+//footer
+footer{
+  grid-area: footer;
+  background-color: rgb(46, 45, 45);
+  color: white;
+}
+}
+@media only screen and (max-width:550px) { .body_container{
+  grid-template-columns:1fr;
+  grid-template-rows:0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 2fr;
+  grid-template-areas:
+  "header "
+  "nav "
+  "primer_articulo "
+  "tourist_programs "
+  "program1"
+  "program2"
+  "program3 "
+  "program4 "
+  "footer ";
+  }
+}
