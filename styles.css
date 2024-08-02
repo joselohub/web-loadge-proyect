@@ -2,8 +2,8 @@
   display: grid;
   font-family: sans-serif;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 5fr 0.5fr 3fr 3fr;
-  grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "tourist_programs tourist_programs tourist_programs" "program1 program2 program3" "footer footer footer";
+  grid-template-rows: 0.1fr 0.5fr 1fr 1fr;
+  grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "tourist_programs tourist_programs tourist_programs" "footer footer footer";
 }
 .body_container header {
   background-color: white;
@@ -38,18 +38,25 @@
 .body_container .tourist_programs {
   grid-area: tourist_programs;
 }
-.body_container .program1 {
-  grid-area: program1;
+.body_container .tourist_programs .cards_programs {
+  display: grid;
+  width: 100%;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+}
+.body_container .tourist_programs .cards_programs div img {
+  width: 100%;
+}
+.body_container .tourist_programs .cards_programs .program1 {
+  background-color: rgb(188, 124, 81);
+  margin: 5px;
+}
+.body_container .tourist_programs .cards_programs .program2 {
   background-color: rgb(244, 223, 209);
   margin: 5px;
 }
-.body_container .program2 {
-  grid-area: program2;
-  background-color: rgb(244, 223, 209);
-  margin: 5px;
-}
-.body_container .program3 {
-  grid-area: program3;
+.body_container .tourist_programs .cards_programs .program3 {
   background-color: rgb(244, 223, 209);
   margin: 5px;
 }
@@ -62,15 +69,15 @@
 @media only screen and (max-width: 700px) {
   .body_container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 2fr;
-    grid-template-areas: "header header" "nav nav" "primer_articulo primer_articulo" "tourist_programs tourist_programs" "program1 programa1" "program2 programa2" "program3 programa3" "footer footer";
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 2fr;
+    grid-template-areas: "header header" "nav nav" "primer_articulo primer_articulo" "tourist_programs tourist_programs" "footer footer";
   }
 }
 @media only screen and (max-width: 550px) {
   .body_container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 2fr;
-    grid-template-areas: "header " "nav" "primer_articulo " "tourist_programs " "program1" "program2" "program3 " "footer ";
+    grid-template-rows: 0.4fr 1fr 1ffr 1fr 2fr;
+    grid-template-areas: "header " "nav" "primer_articulo " "tourist_programs " "footer ";
   }
 }
 
