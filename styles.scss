@@ -23,7 +23,9 @@ $paletasecundaria:rgb(125, 74, 57);
 
 //header
 header{
-  
+  width: 100%;
+  align-content: center;
+  text-align: center;
   background-color: $paletaheader;
   grid-area: header;
   color: black;
@@ -36,11 +38,12 @@ nav{
   background-color:$paletaheader;
   grid-area:nav ;
   display: flex;
-  align-items: center;
+  justify-content: end;
   ul{
+
     list-style: none;
     padding: 0;
-    margin: 0;
+    
 
     li{
       float: left;
@@ -49,7 +52,7 @@ nav{
         display: block;
         
         text-align: center;
-        padding: 14px 16px;
+        padding: 14px 25px;
         text-decoration: none;
       }
     }
@@ -113,7 +116,7 @@ footer{
 
 @media only screen and (max-width:700px) { .body_container{
   grid-template-columns:1fr;
-  grid-template-rows:0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 2fr;
+  grid-template-rows:0.4fr 0.4fr 1fr 1fr 1fr;
   grid-template-areas:
   "header header"
   "nav nav"
@@ -132,6 +135,18 @@ footer{
   "primer_articulo "
   "tourist_programs "
   "footer ";
+  nav{
+    justify-content:center ;
+    ul{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      a{
+        border-top: 1px solid rgb(176, 176, 176);
+      }
+    }
+  }
+
   }
   .cards_programs{
 
