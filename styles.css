@@ -13,9 +13,13 @@
 .body_container nav {
   background-color: white;
   grid-area: nav;
+  display: flex;
+  align-items: center;
 }
 .body_container nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .body_container nav ul li {
   float: left;
