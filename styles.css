@@ -2,7 +2,7 @@
   display: grid;
   font-family: sans-serif;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "tourist_programs tourist_programs tourist_programs" "footer footer footer";
+  grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "tourist_programs tourist_programs tourist_programs" "iconos_servicios iconos_servicios iconos_servicios" "footer footer footer";
 }
 .body_container header {
   width: 100%;
@@ -64,10 +64,19 @@
 }
 .body_container .tourist_programs .cards_programs div img {
   width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 .body_container .tourist_programs .cards_programs .program {
-  background-color: rgb(236, 236, 236);
   margin: 5px;
+  border: 1.5px solid rgb(232, 231, 231);
+  border-radius: 10px;
+}
+.body_container .tourist_programs .cards_programs .program .card_text {
+  color: rgb(98, 98, 98);
+  padding: 15px;
+}
+.body_container .iconos_servicios {
+  display: flex;
 }
 .body_container footer {
   grid-area: footer;

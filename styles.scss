@@ -15,6 +15,7 @@ $paletasecundaria:rgb(125, 74, 57);
   "header nav nav"
   "primer_articulo primer_articulo primer_articulo"
   "tourist_programs tourist_programs tourist_programs"
+  "iconos_servicios iconos_servicios iconos_servicios"
   "footer footer footer";
   
   
@@ -99,14 +100,28 @@ main{
     align-items: start;
     div img{
       width:100%;
+      border-radius: 10px 10px 0 0;
     }
     .program{
-      background-color:rgb(236, 236, 236);
       margin:5px;
+      border:1.5px solid rgb(232, 231, 231) ;
+      border-radius:10px ;
+      .card_text{
+        color: rgb(98, 98, 98);
+        padding: 15px;
+      }
       
     }
   }
 }
+
+//icons container
+
+.iconos_servicios{
+  display: flex;
+  
+}
+
 //footer
 footer{
   grid-area: footer;
