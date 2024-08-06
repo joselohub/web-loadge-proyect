@@ -2,10 +2,11 @@
   display: grid;
   font-family: sans-serif;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "tourist_programs tourist_programs tourist_programs" "iconos_servicios iconos_servicios iconos_servicios" "footer footer footer";
+  grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "about_anything about_anything about_anything" "tourist_programs tourist_programs tourist_programs" "icons_services icons_services icons_services" "footer footer footer";
 }
 .body_container header {
   width: 100%;
+  padding: 20px 0;
   align-content: center;
   text-align: center;
   background-color: white;
@@ -13,6 +14,7 @@
   color: black;
 }
 .body_container nav {
+  padding: 20px 0;
   background-color: white;
   grid-area: nav;
   display: flex;
@@ -21,12 +23,14 @@
 .body_container nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .body_container nav ul li {
   float: left;
 }
 .body_container nav ul li a {
   display: block;
+  color: rgb(53, 121, 53);
   text-align: center;
   padding: 14px 25px;
   text-decoration: none;
@@ -50,10 +54,15 @@
   padding: 16px;
   color: white;
 }
+.body_container .about_anything {
+  grid-area: about_anything;
+  padding: 20px;
+}
 .body_container .tourist_programs {
   grid-area: tourist_programs;
   display: block;
   flex-direction: column;
+  padding: 20px;
 }
 .body_container .tourist_programs .cards_programs {
   display: grid;
@@ -75,25 +84,38 @@
   color: rgb(98, 98, 98);
   padding: 15px;
 }
-.body_container .iconos_servicios {
+.body_container .icons_services {
+  grid-area: icons_services;
   display: flex;
+  justify-content: space-around;
+}
+.body_container .icons_services .icon_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
 }
 .body_container footer {
   grid-area: footer;
   background-color: rgb(35, 35, 35);
   color: white;
 }
+.body_container footer .container_footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
 
 @media only screen and (max-width: 700px) {
   .body_container {
     grid-template-columns: 1fr;
-    grid-template-areas: "header header" "nav nav" "primer_articulo primer_articulo" "tourist_programs tourist_programs" "footer footer";
+    grid-template-areas: "header header" "nav nav" "primer_articulo primer_articulo" "about_anything about_anything" "tourist_programs tourist_programs" "icons_services icons_services" "footer footer";
   }
 }
 @media only screen and (max-width: 550px) {
   .body_container {
     grid-template-columns: 1fr;
-    grid-template-areas: "header " "nav" "primer_articulo " "tourist_programs " "footer ";
+    grid-template-areas: "header " "nav" "primer_articulo " "about_anything about_anything" "tourist_programs" "icons_services" "footer ";
   }
   .body_container nav {
     justify-content: center;
@@ -105,6 +127,10 @@
   }
   .body_container nav ul a {
     border-top: 1px solid rgb(176, 176, 176);
+  }
+  .body_container .icons_services {
+    display: flex;
+    flex-direction: column;
   }
 }
 
