@@ -74,7 +74,7 @@ main{
 }
 .primer_articulo{
   grid-area: primer_articulo;
-  height: 400px;
+  height: 500px;
   background: url(items/river-1841419_1280.jpg);
   background-size:cover;
   display: flex;
@@ -145,11 +145,26 @@ main{
 footer{
   grid-area: footer;
   background-color: $paletafooter;
-  color: white;
+  color: #b8b8b8;
   .container_footer{
     display: flex;
     justify-content: space-around;
-    padding: 30px;
+    padding: 10px;
+
+    
+
+    .social_media{
+      display: flex;
+      align-items: center;
+      a{
+        text-decoration: none;
+        img{
+          width: 35px;
+          
+        }
+        
+      }
+    }
   }
   
 }
@@ -178,6 +193,12 @@ footer{
   "tourist_programs"
   "icons_services"
   "footer ";
+
+  header{
+    
+    
+  }
+
   nav{
     justify-content:center ;
     ul{
@@ -194,5 +215,11 @@ footer{
     flex-direction: column;
   }
 
+  .container_footer{
+    display: flex;
+    flex-direction: column;
   }
+
+  }
+
 }

@@ -41,7 +41,7 @@
 }
 .body_container .primer_articulo {
   grid-area: primer_articulo;
-  height: 400px;
+  height: 500px;
   background: url(items/river-1841419_1280.jpg);
   background-size: cover;
   display: flex;
@@ -98,12 +98,22 @@
 .body_container footer {
   grid-area: footer;
   background-color: rgb(35, 35, 35);
-  color: white;
+  color: #b8b8b8;
 }
 .body_container footer .container_footer {
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  padding: 10px;
+}
+.body_container footer .container_footer .social_media {
+  display: flex;
+  align-items: center;
+}
+.body_container footer .container_footer .social_media a {
+  text-decoration: none;
+}
+.body_container footer .container_footer .social_media a img {
+  width: 35px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -129,6 +139,10 @@
     border-top: 1px solid rgb(176, 176, 176);
   }
   .body_container .icons_services {
+    display: flex;
+    flex-direction: column;
+  }
+  .body_container .container_footer {
     display: flex;
     flex-direction: column;
   }
