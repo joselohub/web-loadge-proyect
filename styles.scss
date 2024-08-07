@@ -194,10 +194,7 @@ footer{
   "icons_services"
   "footer ";
 
-  header{
-    
-    
-  }
+ 
 
   nav{
     justify-content:center ;
@@ -218,6 +215,19 @@ footer{
   .container_footer{
     display: flex;
     flex-direction: column;
+
+    .social_media{
+      display: flex;
+      align-items: center;
+      a{
+        text-decoration: none;
+        img{
+          width: 35px;
+          
+        }
+        
+      }
+    }
   }
 
   }
