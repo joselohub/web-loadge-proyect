@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 .body_container {
   display: grid;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "header nav nav" "primer_articulo primer_articulo primer_articulo" "about_anything about_anything about_anything" "tourist_programs tourist_programs tourist_programs" "icons_services icons_services icons_services" "footer footer footer";
 }
@@ -57,6 +60,11 @@
 .body_container .about_anything {
   grid-area: about_anything;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(102, 137, 102);
+  color: aliceblue;
 }
 .body_container .tourist_programs {
   grid-area: tourist_programs;
@@ -103,7 +111,9 @@
 .body_container footer .container_footer {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+}
+.body_container footer .container_footer div {
+  padding: 30px;
 }
 .body_container footer .container_footer .social_media {
   display: flex;
@@ -120,6 +130,20 @@
   .body_container {
     grid-template-columns: 1fr;
     grid-template-areas: "header header" "nav nav" "primer_articulo primer_articulo" "about_anything about_anything" "tourist_programs tourist_programs" "icons_services icons_services" "footer footer";
+  }
+  .body_container .container_footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .body_container .container_footer .social_media {
+    display: flex;
+    align-items: center;
+  }
+  .body_container .container_footer .social_media a {
+    text-decoration: none;
+  }
+  .body_container .container_footer .social_media a img {
+    width: 35px;
   }
 }
 @media only screen and (max-width: 550px) {
